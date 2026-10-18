@@ -13,7 +13,7 @@ pipeline {
 				container=$(sudo docker ps -q)
 				if [ -n "${container}" ]
 				then
-				sudo docker kill ${container} && sudo docker rm ${container}
+				sudo docker stop ${container} && sudo docker rm ${container}
 				fi
 				
 				sudo docker volume rm myvol
