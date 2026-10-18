@@ -26,8 +26,7 @@ pipeline {
 				sh "sudo docker volume create myvol"
 				sh "sudo cp /mnt/volume-master/index.html /var/lib/docker/volumes/myvol/_data/"
 				sh "sudo docker run -itdp 70:80 -v myvol:/usr/local/apache2/htdocs --name a1 httpd"
-				sh "sudo docker exec -it a1 bash"
-				sh "sudo chmod -R 777 /usr"
+				sh "sudo docker exec a1 chmod -R 777 /usr"
 				
 			}
 		}
