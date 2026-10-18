@@ -16,7 +16,7 @@ pipeline {
 				sudo docker stop ${container} && sudo docker rm ${container}
 				fi
 				
-				sudo docker volume rm myvol
+				sudo docker volume rm -f myvol
 				'''
 			}
 		}
