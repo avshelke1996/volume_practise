@@ -25,7 +25,7 @@ pipeline{
 		}
 		 post { 
         always { 
-            echo 'success'
+            echo 'success-master'
         }
     }
 }
