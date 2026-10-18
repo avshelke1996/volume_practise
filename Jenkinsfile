@@ -23,7 +23,9 @@ pipeline{
 			}
 			
 		}
-		post{
-		    echo "successful"
-		}
+		 post { 
+        always { 
+            echo 'success'
+        }
+    }
 }
