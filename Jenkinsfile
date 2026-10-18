@@ -14,8 +14,8 @@ pipeline {
 				if [ -n "${container}" ]
 				then
 				sudo docker stop ${container} && sudo docker rm ${container}
-				
-				sudo docker volume rm myvol
+				fi
+				sudo docker volume rm myvol || true
 				'''
 			}
 		}
